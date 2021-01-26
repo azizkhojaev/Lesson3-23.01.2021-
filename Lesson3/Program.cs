@@ -97,11 +97,12 @@ namespace Lesson3
         }
 
     }
-    class Homework2  //DZ2
+    class Homework2  //DZ2  
     {
         public void Task1()
         {
             var x = new Random();
+            Console.Write("N = ");
             var N = Convert.ToInt32(Console.ReadLine());
             int[] arr = new int[N+1];
             int max = 0, min=1001, sum =0; 
@@ -114,6 +115,12 @@ namespace Lesson3
                 min = Math.Min(min, cnt);
                 sum += cnt;
             }
+            Console.WriteLine("OUR ARRAY ");
+            for (int i =0; i <N; i ++ )
+            {
+                Console.Write(arr[i]+" ");
+            }
+            Console.WriteLine();
             Console.WriteLine("Max = "+max);
             Console.WriteLine("Min = "+min);
             Console.WriteLine("Sum = "+sum);
@@ -125,11 +132,13 @@ namespace Lesson3
         }
         public void Task2()
         {
+            Console.Write(" N = ");
             var N = Convert.ToInt32(Console.ReadLine());
             var arr = new int[N + 1];
             var Ans = new int[N + 1]; 
             for (int i =1; i <=N; i ++ )
             {
+                Console.Write(i + " index = ");
                 var x = Convert.ToInt32(Console.ReadLine());
                 arr[i] = x; 
             }
@@ -149,12 +158,18 @@ namespace Lesson3
             Console.Write("Size of Array N= " );
             var N = Convert.ToInt32(Console.ReadLine());
             var x = new Random();
-            int[] arr = new int[N + 1];
-            for (int i = 0; i < N; i++)
+            int[] arr = new int[N + 2];
+            for (int i = 1; i <=N; i++)
             {
                 var cnt = x.Next(1, 1000);
                 arr[i] = cnt;
             }
+            Console.WriteLine("OUR ARRAY ");
+            for (int i =1; i <=N; i ++ )
+                Console.WriteLine(i+" = "+arr[i]+" ");
+
+            Console.WriteLine();
+
             Console.Write("Coun = ");
             var count = Convert.ToInt32(Console.ReadLine());
             Console.Write("Index = ");
@@ -184,7 +199,7 @@ namespace Lesson3
 
             //DZ1.Task3();
 
-            DZ2.Task3();
+            DZ2.Task1();
         }
     }
 }
