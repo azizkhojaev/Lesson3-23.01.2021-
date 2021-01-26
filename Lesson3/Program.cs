@@ -26,9 +26,9 @@ namespace Lesson3
             //ractangle
             for (int i =0; i <10; i ++ )
             {
-                for (int j =0; j <20; j ++ )
+                for (int j =0; j <10; j ++ )
                 {
-                    Console.Write("*");
+                    Console.Write("* ");
                 }
                 Console.WriteLine();
             }
@@ -38,8 +38,8 @@ namespace Lesson3
             //triangle
             for (int i =0; i <10; i ++ )
             {
-                for (int j=0; j <=i*2; j ++)
-                    Console.Write("*");
+                for (int j=0; j <=i; j ++)
+                    Console.Write("* ");
                 Console.WriteLine();
             }
             Console.WriteLine();
@@ -51,8 +51,8 @@ namespace Lesson3
                 for (int j =i;j <10; j ++)
                     Console.Write(" ");
 
-                for (int j =0; j <i*2; j ++ )
-                    Console.Write("*");
+                for (int j =0; j <i+1; j ++ )
+                    Console.Write("* ");
 
                 Console.WriteLine();
             }
@@ -60,23 +60,23 @@ namespace Lesson3
 
             Console.WriteLine("Romb");
             //Romb
-            for (int i =0; i <5; i ++ )
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = i; j < 5; j++)
-                    Console.Write("  ");
+                for (int j = i; j < 10; j++)
+                    Console.Write(" ");
 
-                for (int j = 0; j <= i * 2; j++)
-                    Console.Write("**");
+                for (int j = 0; j < i + 1; j++)
+                    Console.Write("* ");
 
                 Console.WriteLine();
             }
-            for (int i = 0; i <= 5; i++)
+            for (int i = 0; i <=10; i++)
             {
                 for (int j = 0; j < i; j++)
-                    Console.Write("  ");
+                    Console.Write(" ");
 
-                for (int j = i*2; j <= 10; j++)
-                    Console.Write("**");
+                for (int j = i; j <=10; j++)
+                    Console.Write("* ");
 
                 Console.WriteLine();
             }
@@ -92,8 +92,8 @@ namespace Lesson3
                 K++;
                 P += cnt; 
             }
-            Console.WriteLine("k = "+ K);
-            Console.WriteLine("S = "+ P );
+            Console.WriteLine("k = "+ K + "month");
+            Console.WriteLine("S = "+ P + "$" );
         }
 
     }
@@ -197,9 +197,9 @@ namespace Lesson3
             var DZ1 = new Homework1();
             var DZ2 = new Homework2();
 
-            //DZ1.Task3();
+            DZ1.Task2();
 
-            DZ2.Task1();
+            //DZ2.Task1();
         }
     }
 }
